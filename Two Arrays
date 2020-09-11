@@ -1,31 +1,29 @@
-using System; 
-class GFG { 
+class Array { 
   
-static void printUncommon(int []arr1,  
-                          int []arr2,  
-                          int n1,  
-                          int n2) 
+static void printNotpresentother(int []array_A,  
+                          	int []array_B,  
+                          	int n1,  
+                          	int n2) 
     { 
   
         int i = 0, j = 0, k = 0; 
         while (i < n1 && j < n2) 
         { 
   
-            // If not common, print smaller 
-            if (arr1[i] < arr2[j]) 
+            
+            if (array_A[i] < array_B[j]) 
             { 
-                Console.Write(arr1[i] + " "); 
+                Console.WriteLine(array_A[i] + " "); 
                 i++; 
                 k++; 
             } 
-            else if (arr2[j] < arr1[i]) 
+            else if (array_B[j] < array_A[i]) 
             { 
-                Console.Write(arr2[j] + " "); 
+                Console.WriteLine(array_B[j] + " "); 
                 k++; 
                 j++; 
             } 
   
-            // Skip common element 
             else 
             { 
                 i++; 
@@ -33,30 +31,30 @@ static void printUncommon(int []arr1,
             } 
         } 
   
-        // printing remaining elements 
+        
         while (i < n1) 
         { 
-            Console.Write(arr1[i] + " "); 
+            Console.WriteLine(array_A[i] + " "); 
             i++; 
             k++; 
         } 
         while (j < n2)  
         { 
-            Console.Write(arr2[j] + " "); 
+            Console.WriteLine(array_B[j] + " "); 
             j++; 
             k++; 
         } 
     } 
   
-    // Driver Code 
+    
     public static void Main() 
     { 
-        int []arr1 = {10, 20, 30}; 
-        int []arr2 = {20, 25, 30, 40, 50}; 
+        int []array_A = {1, 7, 9, 3, 12}; 
+        int []array_B = {12, 5, 57, 1}; 
   
-        int n1 = arr1.Length; 
-        int n2 = arr2.Length; 
+        int n1 = array_A.Length; 
+        int n2 = array_B.Length; 
   
-        printUncommon(arr1, arr2, n1, n2); 
+        printNotpresentother(array_A, array_B, n1, n2); 
     } 
 }
