@@ -1,0 +1,18 @@
+Create StoredProcedure Tasks(
+operation nvarchar(200)=null,
+Id int = null,
+Title nvarchar(200)=null,
+Description nvarchar(200)=null
+)
+
+AS  
+BEGIN  
+(@operation = 'select')
+SELECT * FROM Project WHERE
+id NOT IN (SELECT 
+        p.id
+    FROM
+        Project e
+            INNER JOIN
+        ProjectTask s ON p.id = pt.id);
+END 
