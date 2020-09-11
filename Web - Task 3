@@ -1,0 +1,17 @@
+@{
+    ViewBag.Title = "Tasks2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Tasks2</h2>
+
+
+<div class="container" style="width:30%; margin-top:2%">
+
+    <ul>
+        <li>
+            <a href="/Home/Test1?Id=item.EmployeeId">@item.Name</a>
+        </li>
+</ul>
+
+</div>
