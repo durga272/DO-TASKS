@@ -1,0 +1,9 @@
+@{
+    ViewBag.Title = "Tasks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Tasks</h2>
+
+@Html.TextBox("Title")
+@Html.TextBox("Description")
