@@ -1,0 +1,15 @@
+Create StoredProcedure Tasks(
+operation nvarchar(200)=null,
+Id int = null,
+Title nvarchar(200)=null,
+Description nvarchar(200)=null,
+Project Id int =null,
+Title nvarchar(200)=null,
+Hours nvarchar(200)=null
+)
+
+AS  
+BEGIN  
+(@operation = 'select')
+select Title, Project Id, COUNT(Hours) from ProjectTask where pt.id=@p.id
+END 
